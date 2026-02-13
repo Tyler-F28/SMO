@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario Odyssey Speedrun Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626; /* Red-600 */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b91c1c; /* Red-700 */
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Ensure medium font weight is the baseline as requested */
+        body {
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-medium font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-red-600 text-white sticky top-0 z-50 shadow-lg border-b-4 border-blue-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-m text-2xl bg-white text-red-600 rounded-full w-8 h-8 flex items-center justify-center"></i>
+                    <span class="text-xl tracking-tight">Odyssey Speedrun Hub</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#basics" class="hover:bg-red-700 px-3 py-2 rounded-md transition duration-300">Basic Mechanics</a>
+                        <a href="#advanced" class="hover:bg-red-700 px-3 py-2 rounded-md transition duration-300">Advanced Skips</a>
+                        <a href="https://www.speedrun.com/smo" target="_blank" class="bg-white text-red-600 hover:bg-gray-100 px-4 py-2 rounded-full shadow-md transition duration-300">
+                            Leaderboard <i class="fa-solid fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <polygon points="50,0 100,0 50,100 0,100" />
+                </svg>
+
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl">
+                            <span class="block xl:inline">Master the Movement</span>
+                            <span class="block text-red-600">Break the World Record</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Discover the precise mechanics and glitches that allow runners to complete Super Mario Odyssey in under an hour. From Roll Cancels to the legendary Dino Skip Skip.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <a href="https://www.speedrun.com/smo" target="_blank" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg transition duration-300">
+                                    <i class="fa-solid fa-trophy mr-2"></i> View World Record
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#basics" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg transition duration-300">
+                                    Learn Tricks
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-100 flex items-center justify-center border-l-8 border-blue-600">
+            <!-- Decorative Icon Graphic since we can't use external images reliably -->
+            <div class="text-center p-10">
+                <i class="fa-solid fa-stopwatch text-9xl text-red-600 opacity-20 transform -rotate-12 absolute"></i>
+                <i class="fa-solid fa-gamepad text-9xl text-blue-600 opacity-20 transform rotate-12 absolute right-20 top-20"></i>
+                <div class="relative z-10">
+                    <div class="text-6xl font-bold text-red-600 mb-2">Any%</div>
+                    <div class="text-2xl text-blue-800">Current Top Times</div>
+                    <div class="text-5xl font-bold text-gray-800 mt-2">~56m</div>
+                    <p class="mt-4 text-gray-600 max-w-md mx-auto">
+                        The barrier is constantly being pushed by legends like Tyron18 and others.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mechanics Section -->
+    <div id="basics" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">The Fundamentals</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Essential Movement Tech
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Before attempting skips, you must master Mario's momentum.
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Card 1: Roll Cancel -->
+                <div class="bg-white overflow-hidden shadow-lg rounded-lg border-t-4 border-red-500 hover:transform hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-red-100 rounded-md p-3">
+                                <i class="fa-solid fa-rotate-right text-red-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg leading-6 font-bold text-gray-900">Roll Cancel</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600 text-sm">
+                            <p class="mb-2"><strong>Concept:</strong> Cancels the rolling animation to instantly gain max speed or redirect momentum.</p>
+                            <p class="mb-2"><strong>Inputs:</strong> Press <span class="bg-gray-200 px-1 rounded text-xs border border-gray-400">Y</span> (Roll) then immediately <span class="bg-gray-200 px-1 rounded text-xs border border-gray-400">B</span> (Jump).</p>
+                            <p><strong>Use Case:</strong> Crossing gaps without losing speed and preserving momentum from slopes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Vectoring -->
+                <div class="bg-white overflow-hidden shadow-lg rounded-lg border-t-4 border-blue-500 hover:transform hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-100 rounded-md p-3">
+                                <i class="fa-solid fa-paper-plane text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg leading-6 font-bold text-gray-900">Vectoring</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600 text-sm">
+                            <p class="mb-2"><strong>Concept:</strong> Turning Mario 45° mid-air confuses the game engine, adding speed to his trajectory.</p>
+                            <p class="mb-2"><strong>Inputs:</strong> Rotate analog stick 45° away from destination, then correct back.</p>
+                            <p><strong>Use Case:</strong> Extending jump distance significantly to bypass intended platforms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Cappy Bounce -->
+                <div class="bg-white overflow-hidden shadow-lg rounded-lg border-t-4 border-red-500 hover:transform hover:scale-105 transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-red-100 rounded-md p-3">
+                                <i class="fa-solid fa-hat-cowboy text-red-600 text-xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-lg leading-6 font-bold text-gray-900">Cap Dive</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600 text-sm">
+                            <p class="mb-2"><strong>Concept:</strong> Using Cappy as a temporary platform to gain height or distance.</p>
+                            <p class="mb-2"><strong>Inputs:</strong> <span class="bg-gray-200 px-1 rounded text-xs border border-gray-400">Y</span> (Throw) → Hold <span class="bg-gray-200 px-1 rounded text-xs border border-gray-400">Y</span> → <span class="bg-gray-200 px-1 rounded text-xs border border-gray-400">ZL+Y</span> (Dive).</p>
+                            <p><strong>Use Case:</strong> Essential for almost every skip in the game, including scaling walls.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Tricks Section -->
+    <div id="advanced" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-red-600 font-semibold tracking-wide uppercase">Frame Perfect</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Major Run-Saving Skips
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    These tricks separate the casual runners from the world record holders.
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Trick 1: DSS -->
+                <div class="flex flex-col lg:flex-row bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <div class="lg:w-1/3 bg-blue-600 flex items-center justify-center p-8">
+                        <div class="text-center text-white">
+                            <i class="fa-solid fa-dragon text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">Dino Skip Skip (DSS)</h3>
+                            <span class="inline-block mt-2 bg-blue-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">CASCADE KINGDOM</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3 p-8">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">The T-Rex is Too Slow</h4>
+                        <p class="text-gray-600 mb-4">
+                            Originally, runners captured the T-Rex to smash blocks and use a trampoline ("Dino Skip"). 
+                            <strong>Dino Skip Skip</strong> optimizes this by ignoring the dinosaur entirely. Runners perform a precise series of wall jumps and cap dives on a tiny piece of collision on the cliffside to reach Madame Broode directly.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li><span class="text-blue-600 font-bold">Difficulty:</span> Very High</li>
+                            <li><span class="text-green-600 font-bold">Time Save:</span> ~8-9 seconds over standard Dino Skip</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Trick 2: Nut Clip -->
+                <div class="flex flex-col lg:flex-row bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <div class="lg:w-1/3 bg-red-600 flex items-center justify-center p-8">
+                        <div class="text-center text-white">
+                            <i class="fa-solid fa-tree text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">Nut Clip</h3>
+                            <span class="inline-block mt-2 bg-red-800 px-3 py-1 rounded-full text-xs font-bold tracking-wide">WOODED KINGDOM</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3 p-8">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Breaking Bounds</h4>
+                        <p class="text-gray-600 mb-4">
+                            By grabbing a specific Nut and performing a precise jump/dive sequence near a corner, Mario can clip through the wall. This allows runners to swim out of bounds and bypass a significant portion of the "Road to Sky Garden" objective.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li><span class="text-blue-600 font-bold">Difficulty:</span> High (Precise Setup)</li>
+                            <li><span class="text-green-600 font-bold">Time Save:</span> Significant detour avoidance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Trick 3: Moon Cave Skip -->
+                <div class="flex flex-col lg:flex-row bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <div class="lg:w-1/3 bg-gray-800 flex items-center justify-center p-8">
+                        <div class="text-center text-white">
+                            <i class="fa-solid fa-moon text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">Moon Cave Skip</h3>
+                            <span class="inline-block mt-2 bg-gray-700 px-3 py-1 rounded-full text-xs font-bold tracking-wide">MOON KINGDOM</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3 p-8">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Skipping the Finale</h4>
+                        <p class="text-gray-600 mb-4">
+                            In the final kingdom, a long 2D lava section usually awaits. Runners bypass this by utilizing the Moon's low gravity. By performing a specific long jump and wall jump off the Sphynx or nearby architecture, Mario can ascend the outside of the cliff and trigger the final Bowser fight immediately.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li><span class="text-blue-600 font-bold">Difficulty:</span> Medium/High</li>
+                            <li><span class="text-green-600 font-bold">Time Save:</span> Skips entire cave section</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA / Footer -->
+    <div class="bg-blue-600">
+        <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                <span class="block">Ready to start running?</span>
+                <span class="block text-blue-200">Join the community today.</span>
+            </h2>
+            <p class="mt-4 text-lg leading-6 text-blue-100">
+                The Super Mario Odyssey speedrun community is active, helpful, and constantly finding new optimizations.
+            </p>
+            <a href="https://www.speedrun.com/smo" target="_blank" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 sm:w-auto transition duration-300">
+                Visit Speedrun.com
+            </a>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white border-t-4 border-red-600">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p class="text-sm text-gray-400">
+                    &copy; 2024 Odyssey Speedrun Hub. Fan made project.
+                </p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fa-brands fa-discord text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fa-brands fa-youtube text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fa-brands fa-twitch text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

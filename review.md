@@ -1,0 +1,2 @@
+Original prompt: create a website which includes a link to the speed run world record for Super Mario Odyssey and includes explanations of the various speedrun tricks used with a red and blue color theme and medium-weight font
+The design should be minimalist, with the opening giving you a link to the leaderboard and the required video, and below that, the basic tricks followed by the more advanced skips. This is all based on information from a reliable source, speedrun.com.
